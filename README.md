@@ -1,32 +1,4 @@
-<div class="project row">
-  <div class="col-xs-12 col-md-10 col-lg-8 contains-images">
-
-      <h1 class="gap">
-    0x00. Pascal&#39;s Triangle
-    
-  </h1>
-
-  <div data-react-class="tags/Tags" data-react-props="{&quot;tags&quot;:[{&quot;id&quot;:17,&quot;value&quot;:&quot;Algorithm&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;},{&quot;id&quot;:19,&quot;value&quot;:&quot;Python&quot;,&quot;author_id&quot;:null,&quot;created_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;,&quot;updated_at&quot;:&quot;2022-06-16T01:59:38.000Z&quot;}]}" data-react-cache-id="tags/Tags-0"></div>
-
-  <div data-react-class="projects/ProjectMetadata" data-react-props="{&quot;metadata&quot;:{&quot;author&quot;:&quot;Alexa Orrico, Software Engineer at Holberton School&quot;,&quot;weight&quot;:1,&quot;correction&quot;:{&quot;released&quot;:false,&quot;auto_correction_available_at&quot;:&quot;2024-03-05T06:00:00.000+03:00&quot;,&quot;requires_auto_correction&quot;:true,&quot;requires_manual_correction&quot;:false},&quot;bpi&quot;:{&quot;current&quot;:true,&quot;started&quot;:false,&quot;in_second_deadline&quot;:false,&quot;starts_at&quot;:&quot;2024-03-04T06:00:00.000+03:00&quot;,&quot;ends_at&quot;:&quot;2024-03-08T06:00:00.000+03:00&quot;,&quot;second_deadline_at&quot;:&quot;2024-03-11T06:00:00.000+03:00&quot;}}}" data-react-cache-id="projects/ProjectMetadata-0"></div>
-
-
-
-
-    
-
-
-    <div id="project_id" style="display: none" data-project-id="1213"></div>
-
-
-
-      
-
-      
-
-      <div class="panel panel-default" id="project-description">
-  <div class="panel-body">
-    <h2>Resources</h2>
+<h2>Resources</h2>
 
 <ul>
 <li><a href="/rltoken/F458nFkW9StJum2zPI4khg" title="What is Pascal&#39;s triangle" target="_blank">What is Pascal&rsquo;s triangle</a></li>
