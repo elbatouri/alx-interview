@@ -3,6 +3,7 @@
 Pascal's Triangle
 """
 
+
 def pascal_triangle(n):
     """
     Generate Pascal's Triangle up to the specified level n.
@@ -18,7 +19,7 @@ def pascal_triangle(n):
         for i in range(1, n + 1):
             row = [1]  # The first element in every row is always 1
             for j in range(1, i):
-                # Calculate the binomial coefficient using the previous row's values
+                # Calculate the binomial coefficient
                 value = row[j - 1] * (i - j) // j
                 row.append(value)
             triangle.append(row)
