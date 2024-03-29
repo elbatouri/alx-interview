@@ -3,6 +3,7 @@
 import sys
 import signal
 
+
 # Function to handle SIGINT (Ctrl+C)
 def signal_handler(sig, frame):
     print_statistics()
@@ -15,7 +16,10 @@ signal.signal(signal.SIGINT, signal_handler)
 
 # Initialize variables to hold statistics
 total_file_size = 0
-status_code_counts = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
+status_code_counts = {
+    200: 0, 301: 0, 400: 0, 401: 0,
+    403: 0, 404: 0, 405: 0, 500: 0
+}
 line_count = 0
 
 
@@ -31,7 +35,10 @@ def print_statistics():
 for line in sys.stdin:
     line = line.strip()
     parts = line.split()
-    if len(parts) == 7 and parts[2] == "GET" and parts[3].startswith("/projects/") and parts[4].startswith("HTTP/1.1"):
+    if (len(parts) == 7 and
+        parts[2] == "GET" and
+        parts[3].startswith("/projects/") and
+        parts[4].startswith("HTTP/1.1")):
         try:
             status_code = int(parts[5])
             file_size = int(parts[6])
