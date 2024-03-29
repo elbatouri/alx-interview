@@ -8,13 +8,16 @@ def signal_handler(sig, frame):
     print_statistics()
     sys.exit(0)
 
+
 # Register SIGINT handler
 signal.signal(signal.SIGINT, signal_handler)
+
 
 # Initialize variables to hold statistics
 total_file_size = 0
 status_code_counts = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
 line_count = 0
+
 
 # Function to print statistics
 def print_statistics():
@@ -22,6 +25,7 @@ def print_statistics():
     for status_code in sorted(status_code_counts.keys()):
         if status_code_counts[status_code] > 0:
             print(f"{status_code}: {status_code_counts[status_code]}")
+
 
 # Main loop to read from stdin
 for line in sys.stdin:
@@ -41,6 +45,7 @@ for line in sys.stdin:
             pass  # Skip lines with invalid status code or file size
     else:
         pass  # Skip lines not in the expected format
+
 
 # Print final statistics if the loop exits without interruption
 print_statistics()
