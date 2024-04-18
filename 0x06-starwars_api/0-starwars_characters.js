@@ -2,16 +2,26 @@
 
 const request = require('request');
 
-request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (err, res, body) {
-  if (err) throw err;
-  const actors = JSON.parse(body).characters;
-  exactOrder(actors, 0);
+const movieId = process.argv[2];
+
+const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
+
+request(apiUrl, (error, response, body) => {
+  if (!error && response.statusCode === 200) {
+    const film = JSON.parse(body);
+    const charactersUrls = film.characters;
+    
+    charactersUrls.forEach(characterUrl => {
+      request(characterUrl, (error, response, body) => {
+        if (!error && response.statusCode === 200) {
+          const character = JSON.parse(body);
+          console.log(character.name);
+        } else {
+          console.log('Error fetching character:', error);
+        }
+      });
+    });
+  } else {
+    console.log('Error fetching movie:', error);
+  }
 });
-const exactOrder = (actors, x) => {
-  if (x === actors.length) return;
-  request(actors[x], function (err, res, body) {
-    if (err) throw err;
-    console.log(JSON.parse(body).name);
-    exactOrder(actors, x + 1);
-  });
-};
