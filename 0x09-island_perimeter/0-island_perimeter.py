@@ -1,21 +1,17 @@
 #!/usr/bin/python3
 """
-Returns the perimeter of the island described in the grid.
-:param my_grid: 2D list representing the land and water arrangement.
-:return: The perimeter of the island.
+Island Perimeter
 """
 
 
 def island_perimeter(grid):
-    perimeter = 0
-    rows = len(grid)
-    cols = len(grid[0])
-    for i in range(rows):
-        for j in range(cols):
-            if grid[i][j] == 1:
-                perimeter += 4
-                if i > 0 and grid[i - 1][j] == 1:
-                    perimeter -= 2
-                if j > 0 and grid[i][j - 1] == 1:
-                    perimeter -= 2
-    return perimeter
+    """
+     returns the perimeter of the island described in grid
+    :param grid:
+    :return:
+    """
+    area = 0
+    for row in grid + list(map(list, zip(*grid))):
+        for i1, i2 in zip([0] + row, row + [0]):
+            area += int(i1 != i2)
+    return area
