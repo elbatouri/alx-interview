@@ -4,6 +4,8 @@ Returns the perimeter of the island described in the grid.
 :param my_grid: 2D list representing the land and water arrangement.
 :return: The perimeter of the island.
 """
+
+
 def island_perimeter(grid):
     perimeter = 0
     rows = len(grid)
